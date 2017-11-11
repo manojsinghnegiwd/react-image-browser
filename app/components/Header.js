@@ -3,16 +3,36 @@ import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
+const styles = {
+	toolbar: {
+		backgroundColor: '#4285f4'
+	},
+	underlineStyle: {
+		borderColor: 'white'
+	},
+	hintStyle: {
+		color: 'white'
+	},
+	inputStyle: {
+		color: 'white'
+	}
+}
+
 export default class ToolbarExamplesSimple extends React.Component {
 
 	render() {
 		return (
-			<Toolbar>
+			<Toolbar style={styles.toolbar}>
 				<ToolbarGroup>
 					<TextField
+						inputStyle={styles.inputStyle}
 						hintText="Folder Path"
-						underlineShow={false}
+						underlineStyle={styles.underlineStyle}
+						underlineFocusStyle={styles.underlineStyle}
+						hintStyle={styles.hintStyle}
 					/>
+				</ToolbarGroup>
+				<ToolbarGroup lastChild={true}>
 					<RaisedButton>
 						Browse
 					</RaisedButton>

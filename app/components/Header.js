@@ -5,7 +5,8 @@ import TextField from 'material-ui/TextField';
 
 const styles = {
 	toolbar: {
-		backgroundColor: '#4285f4'
+		backgroundColor: '#4285f4',
+		width: '100%'
 	},
 	underlineStyle: {
 		borderColor: 'white'

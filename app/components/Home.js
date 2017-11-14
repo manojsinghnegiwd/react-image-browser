@@ -5,12 +5,16 @@ import styles from './Home.css';
 
 import Header from './Header';
 import ImagePreview from './ImagePreview';
+import ThumbnailSlider from './ThumbnailSlider';
 
 export default class Home extends Component {
   render() {
 
     const mainContainerStyle = {
-      height: window.innerHeight
+      height: window.innerHeight,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
     }
 
     const imageSrc = 'https://source.unsplash.com/random/800x600';
@@ -21,6 +25,7 @@ export default class Home extends Component {
         <Header />
         <ImagePreview
           src={imageSrc} />
+        <ThumbnailSlider />
       </div>
     );
   }

@@ -1,5 +1,64 @@
 import React from 'react';
 import Slider from 'react-slick';
+import ImageThumbail from './ImageThumbail';
+
+const Images = [
+  {
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  },{
+    name: 'Sample.jpg',
+    src: 'https://source.unsplash.com/random/800x600'
+  }
+]
 
 export default class ThumbnailSlider extends React.Component {
   render () {
@@ -15,12 +74,7 @@ export default class ThumbnailSlider extends React.Component {
     return (
       <div style={{width: '80%'}}>
         <Slider {...settings}>
-          <div><img src="https://source.unsplash.com/random/800x600" height={100} /></div>
-          <div><img src="https://source.unsplash.com/random/800x600" height={100} /></div>
-          <div><img src="https://source.unsplash.com/random/800x600" height={100} /></div>
-          <div><img src="https://source.unsplash.com/random/800x600" height={100} /></div>
-          <div><img src="https://source.unsplash.com/random/800x600" height={100} /></div>
-          <div><img src="https://source.unsplash.com/random/800x600" height={100} /></div>
+          {Images && Images.map((image, index) => <div key={index}><ImageThumbail src={image.src}/></div>)}
         </Slider>
       </div>
     )

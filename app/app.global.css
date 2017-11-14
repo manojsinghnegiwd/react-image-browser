@@ -5,3 +5,7 @@
 body {
 	margin: 0px;
 }
+
+.slick-prev:before, .slick-next:before {
+	color: #4285f4;
+}

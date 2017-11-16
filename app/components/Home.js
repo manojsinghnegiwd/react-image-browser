@@ -25,6 +25,7 @@ export default class Home extends Component {
         <Header />
         <ImagePreview
           src={imageSrc} />
+        <ThumbnailSlider />
       </div>
     );
   }
